@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cover Page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        line-height: 1.5;
+      }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      body {
+        font-family: "Times New Roman", Times, serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        width: 210mm;
+        height: 297mm;
+        padding: 40mm 20mm;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .logo-container {
+        text-align: center;
+        padding-bottom: 6rem;
+      }
+      .logo-container img {
+        max-width: 100%;
+        height: auto;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .header h1 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 40px;
+      }
+      .course-info {
+        font-size: 18px;
+      }
+      .info-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin: 20px 0;
+      }
+      .info-box {
+        background-color: #f3f3f3;
+      }
+      .info-box h3 {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        background-color: #d9d9d9;
+        padding: 8px;
+      }
+      .info-content {
+        padding: 20px;
+      }
+      .info-box p {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+      .submission-section {
+        margin-top: 40px;
+        font-size: 16px;
+      }
+      .signature-section {
+        margin-top: auto;
+        text-align: right;
+        padding-bottom: 40px;
+      }
+      .signature-line {
+        border-top: 1px solid #000;
+        width: 180px;
+        margin-left: auto;
+        padding-top: 5px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo-container">
+        <img src="logo.jpg" alt="University Logo" />
+      </div>
+      <div class="header">
+        <h1>{{TYPE}}</h1>
+        <div class="course-info">
+          <p><strong>Course Code:</strong> {{COURSE_CODE}}</p>
+          <p><strong>Course Title:</strong> {{COURSE_TITLE}}</p>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box">
+          <h3>Submitted by</h3>
+          <div class="info-content">
+            <p><strong>Name:</strong> {{STUDENT_NAME}}</p>
+            <p><strong>ID:</strong> {{STUDENT_ID}}</p>
+            <p><strong>Department:</strong> {{DEPARTMENT}}</p>
+            <p><strong>Section:</strong> {{SECTION}}</p>
+          </div>
+        </div>
+        <div class="info-box">
+          <h3>Submitted to</h3>
+          <div class="info-content">
+            <p><strong>Name:</strong> {{INSTRUCTOR_NAME}}</p>
+            <p><strong>Designation:</strong> {{INSTRUCTOR_DESIGNATION}}</p>
+            <p>Department of CSE</p>
+            <p>Northern University of Business and Technology</p>
+            <p>Khulna</p>
+          </div>
+        </div>
+      </div>
+      <div class="submission-section">
+        <p><strong>Submission Date:</strong></p>
+      </div>
+      <div class="signature-section">
+        <div class="signature-line">Signature</div>
+      </div>
+    </div>
+  </body>
+</html>
