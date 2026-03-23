@@ -92,10 +92,22 @@
         padding-top: 5px;
         font-size: 16px;
       }
+
+      @media print {
+        body {
+          background-color: #ffffff;
+          padding: 0;
+        }
+
+        .container {
+          box-shadow: none;
+        }
+      }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="cover-page">
       <div class="logo-container">
         <img src="logo.jpg" alt="University Logo" />
       </div>
@@ -134,5 +146,42 @@
         <div class="signature-line">Signature</div>
       </div>
     </div>
+
+    <script>
+      function generateA4Pdf(fileName = "cover-page.pdf") {
+        const element = document.getElementById("cover-page");
+        if (!element) {
+          throw new Error("Cover page container not found.");
+        }
+
+        const options = {
+          margin: 0,
+          filename: fileName,
+          image: { type: "jpeg", quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true },
+          jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+          pagebreak: { mode: ["css", "legacy"] },
+        };
+
+        if (typeof html2pdf === "undefined") {
+          window.print();
+          return;
+        }
+
+        return html2pdf()
+          .set(options)
+          .from(element)
+          .toPdf()
+          .get("pdf")
+          .then((pdf) => {
+            while (pdf.internal.getNumberOfPages() > 1) {
+              pdf.deletePage(2);
+            }
+            pdf.save(fileName);
+          });
+      }
+
+      window.generateA4Pdf = generateA4Pdf;
+    </script>
   </body>
 </html>
