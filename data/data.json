@@ -18,67 +18,67 @@
 			"COURSE_CODE": "CSE 4100",
 			"COURSE_TITLE": "Field Work/Industrial Training",
 			"INSTRUCTOR_NAME": "",
-			"INSTRUCTOR_DESIGNATION": "INSTRUCTOR_NAME"
+			"INSTRUCTOR_DESIGNATION": "Lecturer"
 		},
 		{
 			"COURSE_CODE": "CSE 4199",
 			"COURSE_TITLE": "Project/Thesis Proposal",
 			"INSTRUCTOR_NAME": "",
-			"INSTRUCTOR_DESIGNATION": "INSTRUCTOR_NAME"
+			"INSTRUCTOR_DESIGNATION": "Lecturer"
 		},
 		{
 			"COURSE_CODE": "CSE 4101",
 			"COURSE_TITLE": "Compiler Design",
 			"INSTRUCTOR_NAME": "",
-			"INSTRUCTOR_DESIGNATION": "INSTRUCTOR_NAME"
+			"INSTRUCTOR_DESIGNATION": "Lecturer"
 		},
 		{
 			"COURSE_CODE": "CSE 4102",
 			"COURSE_TITLE": "Compiler Design Lab",
 			"INSTRUCTOR_NAME": "",
-			"INSTRUCTOR_DESIGNATION": "INSTRUCTOR_NAME"
+			"INSTRUCTOR_DESIGNATION": "Lecturer"
 		},
 		{
 			"COURSE_CODE": "CSE 4104",
 			"COURSE_TITLE": "Software Development III",
 			"INSTRUCTOR_NAME": "",
-			"INSTRUCTOR_DESIGNATION": "INSTRUCTOR_NAME"
+			"INSTRUCTOR_DESIGNATION": "Lecturer"
 		},
 		{
 			"COURSE_CODE": "CSE 4107",
 			"COURSE_TITLE": "Computer Graphics and Multimedia System",
 			"INSTRUCTOR_NAME": "",
-			"INSTRUCTOR_DESIGNATION": "INSTRUCTOR_NAME"
+			"INSTRUCTOR_DESIGNATION": "Lecturer"
 		},
 		{
 			"COURSE_CODE": "CSE 4108",
 			"COURSE_TITLE": "Computer Graphics and Multimedia System Lab",
 			"INSTRUCTOR_NAME": "",
-			"INSTRUCTOR_DESIGNATION": "INSTRUCTOR_NAME"
+			"INSTRUCTOR_DESIGNATION": "Lecturer"
 		},
 		{
 			"COURSE_CODE": "CSE 4111",
 			"COURSE_TITLE": "Artificial Intelligence and Expert Systems",
 			"INSTRUCTOR_NAME": "",
-			"INSTRUCTOR_DESIGNATION": "INSTRUCTOR_NAME"
+			"INSTRUCTOR_DESIGNATION": "Lecturer"
 		},
 		{
 			"COURSE_CODE": "CSE 4112",
 			"COURSE_TITLE": "Artificial Intelligence and Expert Systems Lab",
 			"INSTRUCTOR_NAME": "",
-			"INSTRUCTOR_DESIGNATION": "INSTRUCTOR_NAME"
+			"INSTRUCTOR_DESIGNATION": "Lecturer"
 		},
 		{
 			"COURSE_CODE": "CSE 4113",
 			"COURSE_TITLE": "Introduction to Data Science",
 			"INSTRUCTOR_NAME": "",
-			"INSTRUCTOR_DESIGNATION": "INSTRUCTOR_NAME"
+			"INSTRUCTOR_DESIGNATION": "Lecturer"
 		},
 		{
 			"COURSE_CODE": "CSE 4114",
 			"COURSE_TITLE": "Introduction to Data Science Lab",
 			"INSTRUCTOR_NAME": "",
-			"INSTRUCTOR_DESIGNATION": "INSTRUCTOR_NAME"
+			"INSTRUCTOR_DESIGNATION": "Lecturer"
 		}
 	]
 }

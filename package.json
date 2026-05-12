@@ -5,7 +5,8 @@
   "description": "Generate cover-page PDF by injecting JSON data into an HTML template",
   "main": "generate_pdf.js",
   "scripts": {
-    "generate": "node generate_pdf.js"
+    "generate": "node generate_pdf.js",
+    "web": "node server.js"
   },
   "dependencies": {
     "puppeteer": "^24.7.1"
