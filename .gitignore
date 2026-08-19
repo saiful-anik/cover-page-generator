@@ -20,6 +20,10 @@ coverage/
 .env
 .env.local
 .env.*.local
+.wrangler/
+.dev.vars
+public/data.json
+public/logo.jpg
 
 # IDEs and OS
 .vscode/

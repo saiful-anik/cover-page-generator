@@ -31,6 +31,18 @@ What you do:
 - press `Generate PDF`
 - PDF downloads as `cover-page.pdf`
 
+## Cloudflare Pages (GitHub deployment)
+
+This project is ready for Cloudflare Pages with Pages Functions and the Browser Rendering binding. The build step copies the editable source data and logo into `public/`, which is the Pages deployment directory.
+
+1. Push this repository to GitHub.
+2. In Cloudflare, go to **Workers & Pages → Create → Pages → Connect to Git** and select the repository.
+3. Set **Framework preset** to `None`, **Build command** to `npm run build`, and **Build output directory** to `public`.
+4. Enable the Browser Rendering binding named `BROWSER` in **Settings → Functions → Bindings** if Cloudflare has not applied `wrangler.jsonc` automatically.
+5. Deploy. Pushes to `main` become production deployments; other branches receive previews.
+
+For local Cloudflare development, run `npm install`, then `npm run build` and `npm run cf:dev`. Browser Rendering uses Cloudflare remotely, so authenticate first with `npx wrangler login`.
+
 ## Command flow
 
 Run:
