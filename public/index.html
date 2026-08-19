@@ -4,246 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cover Page Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
-      :root {
-        --bg: #f4efe6;
-        --panel: #fffdf8;
-        --panel-strong: #f0e6d7;
-        --text: #1d1a15;
-        --muted: #6b6256;
-        --accent: #8e4b2c;
-        --accent-dark: #6f3317;
-        --line: #d7c7b1;
-        --shadow: 0 24px 60px rgba(67, 39, 19, 0.14);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        font-family: Georgia, "Times New Roman", serif;
-        color: var(--text);
-        background:
-          radial-gradient(circle at top left, rgba(255, 255, 255, 0.92), transparent 30%),
-          linear-gradient(135deg, #efe5d6 0%, #f7f3ec 48%, #e9ddca 100%);
-      }
-
-      .page {
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        padding: 24px;
-      }
-
-      .panel {
-        width: min(720px, 100%);
-        background: var(--panel);
-        border: 1px solid rgba(142, 75, 44, 0.14);
-        border-radius: 28px;
-        box-shadow: var(--shadow);
-        overflow: hidden;
-      }
-
-      .hero {
-        padding: 32px 32px 22px;
-        background:
-          linear-gradient(120deg, rgba(142, 75, 44, 0.08), rgba(255, 255, 255, 0)),
-          var(--panel);
-        border-bottom: 1px solid var(--line);
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        padding: 6px 12px;
-        border-radius: 999px;
-        background: var(--panel-strong);
-        color: var(--accent-dark);
-        font-size: 12px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-
-      h1 {
-        margin: 16px 0 10px;
-        font-size: clamp(32px, 5vw, 48px);
-        line-height: 0.95;
-      }
-
-      .subtext {
-        margin: 0;
-        max-width: 52ch;
-        color: var(--muted);
-        font-size: 16px;
-      }
-
-      form {
-        padding: 28px 32px 32px;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-      }
-
-      .field {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .field.full {
-        grid-column: 1 / -1;
-      }
-
-      label {
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 0.03em;
-        color: var(--accent-dark);
-        text-transform: uppercase;
-      }
-
-      select,
-      input,
-      button {
-        font: inherit;
-      }
-
-      select,
-      input {
-        width: 100%;
-        min-height: 52px;
-        padding: 14px 16px;
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        background: #fff;
-        color: var(--text);
-        outline: none;
-      }
-
-      select:focus,
-      input:focus {
-        border-color: var(--accent);
-        box-shadow: 0 0 0 4px rgba(142, 75, 44, 0.12);
-      }
-
-      .actions {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-top: 24px;
-      }
-
-      button {
-        min-width: 220px;
-        min-height: 56px;
-        padding: 14px 22px;
-        border: 0;
-        border-radius: 16px;
-        background: linear-gradient(180deg, #a45430 0%, #7f3a1d 100%);
-        color: #fffdf9;
-        font-weight: 700;
-        cursor: pointer;
-        transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
-        box-shadow: 0 16px 30px rgba(127, 58, 29, 0.24);
-      }
-
-      button:hover:not(:disabled) {
-        transform: translateY(-1px);
-      }
-
-      button:disabled {
-        opacity: 0.7;
-        cursor: wait;
-      }
-
-      .status {
-        margin: 0;
-        color: var(--muted);
-        font-size: 14px;
-      }
-
-      .status.error {
-        color: #9a1f15;
-      }
-
-      .status.success {
-        color: #1d6c3f;
-      }
-
-      @media (max-width: 720px) {
-        .panel {
-          border-radius: 22px;
-        }
-
-        .hero,
-        form {
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-
-        .grid {
-          grid-template-columns: 1fr;
-        }
-
-        .actions {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        button {
-          width: 100%;
-          min-width: 0;
-        }
-      }
+      :root { --cream:#fffdf5; --ink:#1e293b; --violet:#8b5cf6; --pink:#f472b6; --yellow:#fbbf24; --mint:#34d399; --line:#cbd5e1; --muted:#64748b; }
+      * { box-sizing:border-box; }
+      body { margin:0; min-height:100vh; color:var(--ink); font-family:"Plus Jakarta Sans",system-ui,sans-serif; background-color:var(--cream); background-image:radial-gradient(#e7dffb 1.3px,transparent 1.3px); background-size:18px 18px; }
+      .page { position:relative; min-height:100vh; display:grid; place-items:center; padding:48px 24px; overflow:hidden; }
+      .shape { position:absolute; z-index:-1; border:2px solid var(--ink); }
+      .shape.one { width:160px; height:160px; background:var(--yellow); border-radius:50%; top:5%; left:7%; }
+      .shape.two { width:88px; height:88px; background:var(--pink); transform:rotate(22deg); right:9%; top:14%; }
+      .shape.three { width:104px; height:70px; background:var(--mint); border-radius:999px; transform:rotate(-28deg); left:10%; bottom:8%; }
+      .panel { width:min(880px,100%); background:#fff; border:2px solid var(--ink); border-radius:24px; box-shadow:8px 8px 0 var(--ink); overflow:hidden; }
+      .hero { position:relative; padding:34px 38px 28px; background:linear-gradient(105deg,#ede9fe 0%,#fff 68%); border-bottom:2px solid var(--ink); }
+      .eyebrow { display:inline-flex; align-items:center; gap:8px; padding:7px 12px; border:2px solid var(--ink); border-radius:999px; background:var(--yellow); font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+      .eyebrow::before { content:""; width:8px; height:8px; border-radius:50%; background:var(--violet); border:1px solid var(--ink); }
+      h1 { max-width:600px; margin:16px 0 9px; font-family:Outfit,system-ui,sans-serif; font-size:clamp(38px,6vw,62px); line-height:.95; letter-spacing:-.045em; }
+      h1 span { color:var(--violet); }
+      .subtext { max-width:570px; margin:0; color:var(--muted); font-size:15px; line-height:1.65; }
+      .hero-star { position:absolute; right:38px; bottom:24px; color:var(--pink); font-size:58px; line-height:1; transform:rotate(15deg); text-shadow:2px 2px 0 var(--ink); }
+      form { padding:30px 38px 36px; }
+      .grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+      .field { display:flex; flex-direction:column; gap:8px; }
+      .field.full { grid-column:1/-1; }
+      label, .custom-title { font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+      select,input { width:100%; min-height:52px; padding:12px 14px; border:2px solid var(--line); border-radius:16px; color:var(--ink); background:#fff; font:500 14px "Plus Jakarta Sans",system-ui,sans-serif; outline:none; transition:box-shadow .2s,border-color .2s; }
+      select:focus,input:focus { border-color:var(--violet); box-shadow:4px 4px 0 var(--violet); }
+      .custom-fields { display:none; grid-column:1/-1; grid-template-columns:repeat(3,1fr); gap:12px; padding:16px; border:2px dashed var(--ink); border-radius:16px; background:#faf8ff; }
+      .custom-fields.is-visible { display:grid; animation:pop .25s cubic-bezier(.34,1.56,.64,1); }
+      .custom-fields.course-custom { grid-template-columns:repeat(2,1fr); }
+      .custom-fields .field { gap:6px; }
+      .custom-fields label { font-size:10px; color:var(--muted); }
+      .custom-title { grid-column:1/-1; color:var(--violet); }
+      .actions { display:flex; align-items:center; gap:18px; margin-top:26px; }
+      button { min-height:54px; padding:12px 20px; border:2px solid var(--ink); border-radius:999px; color:#fff; background:var(--violet); box-shadow:4px 4px 0 var(--ink); font:700 15px "Plus Jakarta Sans",system-ui,sans-serif; cursor:pointer; transition:all .2s cubic-bezier(.34,1.56,.64,1); }
+      button:hover:not(:disabled) { transform:translate(-2px,-2px); box-shadow:6px 6px 0 var(--ink); }
+      button:active:not(:disabled) { transform:translate(2px,2px); box-shadow:2px 2px 0 var(--ink); }
+      button:disabled { opacity:.7; cursor:wait; }
+      .status { margin:0; color:var(--muted); font-size:13px; }.status.error { color:#b42318; }.status.success { color:#087f5b; }
+      @keyframes pop { from { opacity:0; transform:scale(.96); } to { opacity:1; transform:scale(1); } }
+      @media(max-width:700px) { .page { padding:24px 14px; } .shape { display:none; } .panel { border-radius:20px; box-shadow:4px 4px 0 var(--ink); } .hero,form { padding-left:20px; padding-right:20px; } .hero-star { right:20px; font-size:42px; } .grid,.custom-fields,.custom-fields.course-custom { grid-template-columns:1fr; } .actions { flex-direction:column; align-items:stretch; } button { width:100%; } }
+      @media(prefers-reduced-motion:reduce) { * { animation:none!important; transition:none!important; } }
     </style>
   </head>
   <body>
     <main class="page">
-      <section class="panel">
-        <div class="hero">
-          <div class="eyebrow">Cover Page</div>
-          <h1>Pick. Click. Download.</h1>
-          <p class="subtext">
-            Choose type, student, course, optional date. Then generate the PDF.
-          </p>
-        </div>
-
+      <i class="shape one"></i><i class="shape two"></i><i class="shape three"></i>
+      <section class="panel" aria-labelledby="page-title">
+        <header class="hero"><span class="eyebrow">PDF cover maker</span><h1 id="page-title">Make it <span>yours.</span></h1><p class="subtext">Choose a saved option or switch to custom and enter your own details. Your polished cover page will be ready to download in a click.</p><span class="hero-star" aria-hidden="true">✦</span></header>
         <form id="cover-form">
           <div class="grid">
-            <div class="field">
-              <label for="type">Type</label>
-              <select id="type" name="type" required></select>
-            </div>
-
-            <div class="field">
-              <label for="profile">Student</label>
-              <select id="profile" name="profile" required></select>
-            </div>
-
-            <div class="field full">
-              <label for="course">Course</label>
-              <select id="course" name="course" required></select>
-            </div>
-
-            <div class="field full">
-              <label for="submissionDate">Date (optional)</label>
-              <input id="submissionDate" name="submissionDate" type="date" />
-            </div>
+            <div class="field full"><label for="type">Cover page type</label><select id="type" name="type" required></select></div>
+            <div id="customType" class="custom-fields" aria-hidden="true"><span class="custom-title">Custom cover page type</span><div class="field"><label for="customTypeInput">Type</label><input id="customTypeInput" placeholder="e.g. Project Report" /></div></div>
+            <div class="field"><label for="profile">Student</label><select id="profile" name="profile" required></select></div>
+            <div class="field"><label for="course">Course</label><select id="course" name="course" required></select></div>
+            <div id="customProfile" class="custom-fields" aria-hidden="true"><span class="custom-title">Custom student details</span><div class="field"><label for="customStudentName">Full name</label><input id="customStudentName" placeholder="e.g. Alex Rahman" /></div><div class="field"><label for="customStudentId">Student ID</label><input id="customStudentId" placeholder="e.g. 11230121086" /></div><div class="field"><label for="customSection">Section</label><input id="customSection" placeholder="e.g. 7A" /></div></div>
+            <div id="customCourse" class="custom-fields course-custom" aria-hidden="true"><span class="custom-title">Custom course details</span><div class="field"><label for="customCourseCode">Course code</label><input id="customCourseCode" placeholder="e.g. CSE 4101" /></div><div class="field"><label for="customCourseTitle">Course title</label><input id="customCourseTitle" placeholder="e.g. Compiler Design" /></div><div class="field"><label for="customInstructorName">Instructor name (optional)</label><input id="customInstructorName" placeholder="e.g. Dr. Hasan" /></div><div class="field"><label for="customInstructorDesignation">Designation (optional)</label><input id="customInstructorDesignation" placeholder="e.g. Lecturer" /></div></div>
+            <div class="field full"><label for="submissionDate">Submission date <span style="color:var(--muted);font-weight:500">(optional)</span></label><input id="submissionDate" name="submissionDate" type="date" /></div>
           </div>
-
-          <div class="actions">
-            <button id="generateButton" type="submit">Generate PDF</button>
-            <p id="status" class="status">Loading choices...</p>
-          </div>
+          <div class="actions"><button id="generateButton" type="submit">Generate PDF →</button><p id="status" class="status" role="status">Loading choices...</p></div>
         </form>
       </section>
     </main>
-
     <script src="/app.js"></script>
   </body>
 </html>

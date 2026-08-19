@@ -38,6 +38,8 @@ const server = http.createServer(async (req, res) => {
         profileArg: body.profileIndex,
         courseArg: body.courseValue,
         submissionDate: body.submissionDate,
+        customProfile: body.customProfile,
+        customCourse: body.customCourse,
       });
 
       const pdfBuffer = await generatePdfFromJson({

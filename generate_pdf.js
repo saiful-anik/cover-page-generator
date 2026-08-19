@@ -229,24 +229,26 @@ async function buildTemplateData({
   profileArg,
   courseArg,
   submissionDate,
+  customProfile,
+  customCourse,
 } = {}) {
   const source = await loadSourceData(jsonFile);
 
-  if (profileArg == null || courseArg == null) {
+  if ((profileArg == null && !customProfile) || (courseArg == null && !customCourse)) {
     throw new Error(getUsageMessage(source));
   }
 
-  const profileIndex = parseRequiredIndex(profileArg, source.PROFILES.length, "profile");
-  const selectedProfile = source.PROFILES[profileIndex];
-  const selectedCourse = findCourse(source.COURSES, courseArg);
-  const selectedType = findType(source.TYPE, typeArg);
+  const selectedProfile = customProfile ? normalizeCustomProfile(customProfile) : source.PROFILES[parseRequiredIndex(profileArg, source.PROFILES.length, "profile")];
+  const selectedCourse = customCourse ? normalizeCustomCourse(customCourse) : findCourse(source.COURSES, courseArg);
+  const typeFromList = findType(source.TYPE, typeArg);
+  const selectedType = typeFromList ?? String(typeArg ?? "").trim();
 
   if (!selectedCourse) {
     throw new Error(`Course '${courseArg}' not found. Use a course index or exact course code.`);
   }
 
-  if (typeArg != null && selectedType == null) {
-    throw new Error(`Type '${typeArg}' not found. Use a type index or exact type value.`);
+  if (!selectedType) {
+    throw new Error("Please enter a cover page type.");
   }
 
   return {
@@ -258,6 +260,35 @@ async function buildTemplateData({
     }),
     SUBMISSION_DATE: submissionDate ?? "",
   };
+}
+
+function normalizeCustomProfile(profile) {
+  const result = {
+    STUDENT_NAME: String(profile.name ?? "").trim(),
+    STUDENT_ID: String(profile.id ?? "").trim(),
+    SECTION: String(profile.section ?? "").trim(),
+  };
+
+  if (!result.STUDENT_NAME || !result.STUDENT_ID || !result.SECTION) {
+    throw new Error("Enter name, ID, and section for the custom student.");
+  }
+
+  return result;
+}
+
+function normalizeCustomCourse(course) {
+  const result = {
+    COURSE_CODE: String(course.code ?? "").trim(),
+    COURSE_TITLE: String(course.title ?? "").trim(),
+    INSTRUCTOR_NAME: String(course.instructorName ?? "").trim(),
+    INSTRUCTOR_DESIGNATION: String(course.instructorDesignation ?? "").trim(),
+  };
+
+  if (!result.COURSE_CODE || !result.COURSE_TITLE) {
+    throw new Error("Enter both course code and course title for the custom course.");
+  }
+
+  return result;
 }
 
 function parseRequiredIndex(value, total, label) {

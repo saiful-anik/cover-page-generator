@@ -1,84 +1,84 @@
 {
-	"TYPE": ["Assignment", "Lab Report"],
-	"DEPARTMENT": "CSE",
-	"PROFILES": [
-		{
-			"STUDENT_ID": "11230121086",
-			"STUDENT_NAME": "Saiful Islam Anik",
-			"SECTION": "7A"
-		},
-		{
-			"STUDENT_ID": "11230321398",
-			"STUDENT_NAME": "Mst. Sumaya Akter",
-			"SECTION": "6F"
-		}
-	],
-	"COURSES": [
-		{
-			"COURSE_CODE": "CSE 4100",
-			"COURSE_TITLE": "Field Work/Industrial Training",
-			"INSTRUCTOR_NAME": "",
-			"INSTRUCTOR_DESIGNATION": "Lecturer"
-		},
-		{
-			"COURSE_CODE": "CSE 4199",
-			"COURSE_TITLE": "Project/Thesis Proposal",
-			"INSTRUCTOR_NAME": "",
-			"INSTRUCTOR_DESIGNATION": "Lecturer"
-		},
-		{
-			"COURSE_CODE": "CSE 4101",
-			"COURSE_TITLE": "Compiler Design",
-			"INSTRUCTOR_NAME": "Debasish Biswas",
-			"INSTRUCTOR_DESIGNATION": "Lecturer"
-		},
-		{
-			"COURSE_CODE": "CSE 4102",
-			"COURSE_TITLE": "Compiler Design Lab",
-			"INSTRUCTOR_NAME": "Debasish Biswas",
-			"INSTRUCTOR_DESIGNATION": "Lecturer"
-		},
-		{
-			"COURSE_CODE": "CSE 4104",
-			"COURSE_TITLE": "Software Development III",
-			"INSTRUCTOR_NAME": "Md. Riaz Mahmud",
-			"INSTRUCTOR_DESIGNATION": "Assistant Professor"
-		},
-		{
-			"COURSE_CODE": "CSE 4107",
-			"COURSE_TITLE": "Computer Graphics and Multimedia System",
-			"INSTRUCTOR_NAME": "Susmita Sejuti Saha",
-			"INSTRUCTOR_DESIGNATION": "Lecturer"
-		},
-		{
-			"COURSE_CODE": "CSE 4108",
-			"COURSE_TITLE": "Computer Graphics and Multimedia System Lab",
-			"INSTRUCTOR_NAME": "",
-			"INSTRUCTOR_DESIGNATION": "Lecturer"
-		},
-		{
-			"COURSE_CODE": "CSE 4111",
-			"COURSE_TITLE": "Artificial Intelligence and Expert Systems",
-			"INSTRUCTOR_NAME": "Umme Habiba",
-			"INSTRUCTOR_DESIGNATION": "Lecturer"
-		},
-		{
-			"COURSE_CODE": "CSE 4112",
-			"COURSE_TITLE": "Artificial Intelligence and Expert Systems Lab",
-			"INSTRUCTOR_NAME": "Umme Habiba",
-			"INSTRUCTOR_DESIGNATION": "Lecturer"
-		},
-		{
-			"COURSE_CODE": "CSE 4113",
-			"COURSE_TITLE": "Introduction to Data Science",
-			"INSTRUCTOR_NAME": "Vashkar Kar",
-			"INSTRUCTOR_DESIGNATION": "Lecturer"
-		},
-		{
-			"COURSE_CODE": "CSE 4114",
-			"COURSE_TITLE": "Introduction to Data Science Lab",
-			"INSTRUCTOR_NAME": "Vashkar Kar",
-			"INSTRUCTOR_DESIGNATION": "Lecturer"
-		}
-	]
+  "TYPE": ["Assignment", "Lab Report", "Project Proposal"],
+  "DEPARTMENT": "CSE",
+  "PROFILES": [
+    {
+      "STUDENT_ID": "11230121086",
+      "STUDENT_NAME": "Saiful Islam Anik",
+      "SECTION": "7A"
+    },
+    {
+      "STUDENT_ID": "11230321398",
+      "STUDENT_NAME": "Mst. Sumaya Akter",
+      "SECTION": "6F"
+    }
+  ],
+  "COURSES": [
+    {
+      "COURSE_CODE": "CSE 4100",
+      "COURSE_TITLE": "Field Work/Industrial Training",
+      "INSTRUCTOR_NAME": "Rashik Reza Fahim",
+      "INSTRUCTOR_DESIGNATION": "Lecturer"
+    },
+    {
+      "COURSE_CODE": "CSE 4199",
+      "COURSE_TITLE": "Project/Thesis Proposal",
+      "INSTRUCTOR_NAME": "Talha Al Junaid",
+      "INSTRUCTOR_DESIGNATION": "Lecturer"
+    },
+    {
+      "COURSE_CODE": "CSE 4101",
+      "COURSE_TITLE": "Compiler Design",
+      "INSTRUCTOR_NAME": "Debasish Biswas",
+      "INSTRUCTOR_DESIGNATION": "Lecturer"
+    },
+    {
+      "COURSE_CODE": "CSE 4102",
+      "COURSE_TITLE": "Compiler Design Lab",
+      "INSTRUCTOR_NAME": "Debasish Biswas",
+      "INSTRUCTOR_DESIGNATION": "Lecturer"
+    },
+    {
+      "COURSE_CODE": "CSE 4104",
+      "COURSE_TITLE": "Software Development III",
+      "INSTRUCTOR_NAME": "Md. Riaz Mahmud",
+      "INSTRUCTOR_DESIGNATION": "Assistant Professor"
+    },
+    {
+      "COURSE_CODE": "CSE 4107",
+      "COURSE_TITLE": "Computer Graphics and Multimedia System",
+      "INSTRUCTOR_NAME": "Susmita Sejuti Saha",
+      "INSTRUCTOR_DESIGNATION": "Lecturer"
+    },
+    {
+      "COURSE_CODE": "CSE 4108",
+      "COURSE_TITLE": "Computer Graphics and Multimedia System Lab",
+      "INSTRUCTOR_NAME": "",
+      "INSTRUCTOR_DESIGNATION": "Lecturer"
+    },
+    {
+      "COURSE_CODE": "CSE 4111",
+      "COURSE_TITLE": "Artificial Intelligence and Expert Systems",
+      "INSTRUCTOR_NAME": "Umme Habiba",
+      "INSTRUCTOR_DESIGNATION": "Lecturer"
+    },
+    {
+      "COURSE_CODE": "CSE 4112",
+      "COURSE_TITLE": "Artificial Intelligence and Expert Systems Lab",
+      "INSTRUCTOR_NAME": "Umme Habiba",
+      "INSTRUCTOR_DESIGNATION": "Lecturer"
+    },
+    {
+      "COURSE_CODE": "CSE 4113",
+      "COURSE_TITLE": "Introduction to Data Science",
+      "INSTRUCTOR_NAME": "Vashkar Kar",
+      "INSTRUCTOR_DESIGNATION": "Lecturer"
+    },
+    {
+      "COURSE_CODE": "CSE 4114",
+      "COURSE_TITLE": "Introduction to Data Science Lab",
+      "INSTRUCTOR_NAME": "Vashkar Kar",
+      "INSTRUCTOR_DESIGNATION": "Lecturer"
+    }
+  ]
 }
