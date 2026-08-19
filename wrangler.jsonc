@@ -2,10 +2,8 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "cover-page-generator",
   "pages_build_output_dir": "./public",
-  "compatibility_date": "2026-08-20",
-  "compatibility_flags": ["nodejs_compat_v2"],
+  "compatibility_date": "2026-08-19",
   "browser": {
-    "binding": "BROWSER",
-    "remote": true
+    "binding": "BROWSER"
   }
 }
