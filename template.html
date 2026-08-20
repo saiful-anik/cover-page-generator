@@ -38,8 +38,11 @@
         padding-bottom: 6rem;
       }
       .logo-container img {
-        max-width: 100%;
+        display: block;
+        width: 100%;
+        max-width: none;
         height: auto;
+        margin: 0 auto;
       }
       .header {
         text-align: center;
@@ -52,6 +55,13 @@
       }
       .course-info {
         font-size: 18px;
+        line-height: 1.45;
+      }
+      .course-info p {
+        margin: 0;
+      }
+      .course-info p + p {
+        margin-top: 6px;
       }
       .info-section {
         display: grid;
